@@ -3,9 +3,9 @@ from tests.metrics.registry import MetricRegistry
 from tests.metrics.scorer import SimilarityScorer
 from tests.metrics.semantic import SemanticSimilarityMetric
 from tests.metrics.keyword_match import KeywordMatchMetric
-from tests.metrics.nli import NLIEntailmentMetric
-from tests.metrics.llm_judge import LLMJudgeMetric
-from tests.metrics.async_llm_judge import AsyncLLMJudgeMetric
+#from tests.metrics.nli import NLIEntailmentMetric
+#from tests.metrics.llm_judge import LLMJudgeMetric
+#from tests.metrics.async_llm_judge import AsyncLLMJudgeMetric
 
 __all__ = [
     'MetricBase',
@@ -13,7 +13,7 @@ __all__ = [
     'SimilarityScorer',
     'SemanticSimilarityMetric',
     'KeywordMatchMetric',
-    'NLIEntailmentMetric',
-    'LLMJudgeMetric',
-    'AsyncLLMJudgeMetric',
+    #'NLIEntailmentMetric',
+    #'LLMJudgeMetric',
+    #'AsyncLLMJudgeMetric',
 ]

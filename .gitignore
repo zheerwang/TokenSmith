@@ -246,3 +246,8 @@ marimo/_lsp/
 __marimo__/
 
 tests/results
+
+.DS_Store
+index/
+logs/
+

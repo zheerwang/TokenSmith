@@ -12,6 +12,7 @@ from src.ranking.ranker import EnsembleRanker
 from src.preprocessing.chunking import DocumentChunker
 from src.retriever import apply_seg_filter, BM25Retriever, FAISSRetriever, load_artifacts
 from src.query_enhancement import generate_hypothetical_document
+from src.ranking.reranker import rerank
 
 
 def parse_args() -> argparse.Namespace:
@@ -212,7 +213,7 @@ def get_answer(
         
         # Step 3: Final Re-ranking (if enabled)
         # Disabled till we fix the core pipeline
-        # ranked_chunks = rerank(question, ranked_chunks, mode=cfg.rerank_mode, top_n=cfg.top_k)
+        ranked_chunks = rerank(question, ranked_chunks, mode=cfg.rerank_mode, top_n=cfg.top_k)
     
     # Step 4: Generation
     model_path = args.model_path or cfg.model_path

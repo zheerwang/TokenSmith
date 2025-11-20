@@ -41,7 +41,7 @@ class QueryPlanConfig:
     # query enhancement
     use_hyde: bool
     hyde_max_tokens: int
-    use_indexed_chunks: bool
+    use_indexed_chunks: bool = False
 
     # ---------- chunking strategy + artifact name helpers ----------
     def make_strategy(self) -> ChunkStrategy:

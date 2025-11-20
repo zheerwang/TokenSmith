@@ -14,14 +14,14 @@ class MetricRegistry:
         from tests.metrics import (
             SemanticSimilarityMetric,
             KeywordMatchMetric,
-            NLIEntailmentMetric,
-            AsyncLLMJudgeMetric
+            #NLIEntailmentMetric,
+            #AsyncLLMJudgeMetric
         )
 
         self.register(SemanticSimilarityMetric())
         self.register(KeywordMatchMetric())
-        self.register(NLIEntailmentMetric())
-        self.register(AsyncLLMJudgeMetric())
+        #self.register(NLIEntailmentMetric())
+        #self.register(AsyncLLMJudgeMetric())
 
     def register(self, metric: MetricBase):
         """Register a new metric."""
